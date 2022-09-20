@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+// import { Navbar } from 'react-bootstrap';
+import { Route,Routes } from 'react-router-dom';
 import './App.css';
+import Topbar from './components/Topbar';
+import Navbar from './components/Navbar';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{/* <h1>Hello this is testing page</h1> */}
+      {/* <Navbar />
+      <Topbar /> */}
+      <Dashboard />
     </div>
   );
 }
