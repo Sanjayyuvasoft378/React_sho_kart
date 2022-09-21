@@ -1,0 +1,41 @@
+########  FOR Confirm Password ###############
+       
+            {/* <div>
+              <label className="labelConfirm">Confirm Password</label>
+              <br />
+              <input
+                name="confirmPassword"
+                type="password"
+                {...register("confirmPassword")}
+                className={`form-control ${
+                  errors.confirmPassword ? "is-invalid" : ""
+                }`}
+              />
+              <div className="invalid-feedback">
+                {errors.confirmPassword?.message}
+              </div>
+            </div> */}
+
+---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+<GoogleOAuthProvider>
+<GoogleLogin
+    clientId={
+    "804125432757-u18pbpgpdq0tg35nlegi742rh99slnus.apps.googleusercontent.com"
+    }
+    onSuccess={credentialResponse}
+    onError={credentialResponse}
+    cookiePolicy={"http://localhost:3000"}
+    buttonText="Login"
+>
+    <span> Login with Google</span>
+</GoogleLogin>
+</GoogleOAuthProvider>
+
+
+
+
+
+
+

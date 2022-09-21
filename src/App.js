@@ -1,17 +1,20 @@
-// import { Navbar } from 'react-bootstrap';
-import { Route,Routes } from 'react-router-dom';
 import './App.css';
-import Topbar from './components/Topbar';
+import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Topbar from './components/Topbar';
 import Dashboard from './components/Dashboard';
+import { Route, Routes } from 'react-router-dom';
+import { Signup } from './components/Signup';
 
 function App() {
   return (
     <div className="App">
-{/* <h1>Hello this is testing page</h1> */}
-      {/* <Navbar />
-      <Topbar /> */}
-      <Dashboard />
+       <Routes>
+      <Route path='' element={<Dashboard/>} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
+       </Routes>
+      
     </div>
   );
 }

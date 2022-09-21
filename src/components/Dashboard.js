@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+  const navigate = useNavigate()
+
+  
   return (
     <div>
       <div className="container-fluid">
@@ -31,10 +35,10 @@ function Dashboard() {
                   My Account
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <button className="dropdown-item" type="button">
+                  <button className="dropdown-item" type="button" onClick={()=>navigate("/login")}>
                     Sign in
                   </button>
-                  <button className="dropdown-item" type="button">
+                  <button className="dropdown-item" type="button" onClick={()=>navigate("/login")} >
                     Sign up
                   </button>
                 </div>
@@ -328,12 +332,11 @@ function Dashboard() {
                 </div>
                 <div
                   className="carousel-item position-relative"
-                  style={{height: "430px"}}
+                  style={{ height: "396px" ,width:" 900px" ,marginTop: "19px"}}
                 >
                   <img
                     className="position-absolute w-100 h-100"
-                    src="assets/img/carousel-2.jpg"
-                  />
+                    src="assets/img/carousel-2.jpg" style={{display: "block",width:"100px"}}/>
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{maxWidth: "700px"}}>
                       <h1 className="display-4 text-white mb-3 animate__animated animate__fadeInDown">
@@ -457,7 +460,9 @@ function Dashboard() {
               <div className="cat-item d-flex align-items-center mb-4">
                 <div
                   className="overflow-hidden"
-                  style={{ width: "100px", height: "100px" }}
+                  style={{ width: "100px", height: "100px", '&:hover': {
+                    border: '1px solid green'
+               }, }}
                 >
                   <img className="img-fluid" src="assets/img/cat-1.jpg" alt="" />
                 </div>
