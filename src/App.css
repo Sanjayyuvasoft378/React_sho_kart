@@ -42,6 +42,28 @@
   }
 }
 
+.formWrapper{
+  background-color: antiquewhite;
+  width: 50%;
+  height: auto;
+  align-items: center;
+  padding: 50px;
+  margin-left: 290px;
+  box-shadow: 0px 0px 15px 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.formWrapper p {
+  margin-top: 20px;
+  line-height: 10px;
+}
+.rgsBtn{
+   display: block;
+    margin-left: 190px;
+    margin-top: 20px;
+     background-color: rgb(64, 64, 231);
+  }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

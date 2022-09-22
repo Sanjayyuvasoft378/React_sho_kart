@@ -1,3 +1,4 @@
+import zIndex from "@material-ui/core/styles/zIndex";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -38,7 +39,7 @@ function Dashboard() {
                   <button className="dropdown-item" type="button" onClick={()=>navigate("/login")}>
                     Sign in
                   </button>
-                  <button className="dropdown-item" type="button" onClick={()=>navigate("/login")} >
+                  <button className="dropdown-item" type="button" onClick={()=>navigate("/signup")} >
                     Sign up
                   </button>
                 </div>
@@ -110,10 +111,10 @@ function Dashboard() {
           <div className="col-lg-4">
             <a href="" className="text-decoration-none">
               <span className="h1 text-uppercase text-primary bg-dark px-2">
-                Multi
+                Shopping
               </span>
               <span className="h1 text-uppercase text-dark bg-primary px-2 ml-n1">
-                Shop
+                Kart
               </span>
             </a>
           </div>
@@ -291,7 +292,7 @@ function Dashboard() {
 
       <div className="container-fluid mb-3">
         <div className="row px-xl-5">
-          <div className="col-lg-8">
+          <div className="col-lg-8" style={{ zIndex : -1}}>
             <div
               id="header-carousel"
               className="carousel slide carousel-fade mb-30 mb-lg-0"
@@ -332,7 +333,7 @@ function Dashboard() {
                 </div>
                 <div
                   className="carousel-item position-relative"
-                  style={{ height: "396px" ,width:" 900px" ,marginTop: "19px"}}
+                  style={{ height: "396px" ,width:" 900px" ,marginTop: "19px" }}
                 >
                   <img
                     className="position-absolute w-100 h-100"

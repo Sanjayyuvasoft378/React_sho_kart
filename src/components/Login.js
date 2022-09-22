@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import axios from "axios"
 // import { GoogleLogin } from "react-google-login";
 // import { GoogleOAuthProvider } from "@react-oauth/google";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 export default function Login() {
   const {
     register,
@@ -14,12 +14,14 @@ export default function Login() {
     reset,
     formState: { errors },
   } = useForm();
-   
+
+  const navigate = useNavigate();
   
   const onSubmit = (data) => {
     console.log(data);
     axios.post("http://127.0.0.1:8000/store/userlogin/",data)
     .then(res=>console.log(res.data))
+    navigate('/')
   };
 
 
@@ -57,7 +59,7 @@ export default function Login() {
             <br />
           </div>
           <input type="submit" class="btn btn-primary"/>
-          <p className='mt-3'>Alredy Have an Accout?<span><NavLink to="signup" >Signup</NavLink></span> </p>
+          <p className='mt-3'>Alredy Have an Accout?<span><NavLink to="/signup" >Signup</NavLink></span> </p>
         </div><br/>
 
       </form>
